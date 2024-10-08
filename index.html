@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Permanent+Marker&family=Shadows+Into+Light&family=Caveat:wght@400..700&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Imgs/Logo.png" type="image/x-icon">
+    <title>Zapatillas Hat Trick</title>
+</head>
+<!-- Navbar -->
+<nav class="bg-black text-white p-4 w-full shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+    <a href="#inicio" class="text-xl font-bold">Zapatillas Hat Trick</a>
+    <div class="space-x-8">
+      <a href="#Catalogo" class="hover:text-gray-400">Catálogo</a>
+      <button id="mayoristasBtn" class="hover:text-gray-400">Mayoristas</button>
+    </div>
+  </div>
+</nav>
+<!-- Modal Formulario Mayoristas -->
+<div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden z-50">
+  <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+    <h2 class="text-2xl font-semibold mb-4">Formulario Mayoristas</h2>
+    <form id="mayoristasForm">
+      <div class="mb-4">
+        <label class="block text-gray-700">Nombre Completo</label>
+        <input type="text" id="nombre" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Correo</label>
+        <input type="email" id="correo" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Número de Contacto</label>
+        <input type="tel" id="contacto" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Mensaje</label>
+        <textarea id="mensaje" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400" required></textarea>
+      </div>
+      <button type="submit" class="w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-700">Enviar</button>
+    </form>
+    <button id="closeModal" class="mt-4 text-gray-500 hover:text-gray-900">Cerrar</button>
+  </div>
+</div>
+<!-----------BANNER--------------->
+<body id="top">
+    <div id="inicio" class="banner">
+        <div class="logo-title-container">
+         <h1>¡Bienvenid@ a Hat Trick!</h1>
+        </div>
+    </div>
+  <!----------- CINTA NEGRA --------------->
+    <div class="header">
+            <div class="icon-container">
+            <i class="fas fa-truck"> Envio a Nivel Nacional </i>
+            <i class="fas fa-dollar-sign"> Pagas al recibir tu pedido </i>
+            <i class="fas fa-gift"> Personalizado GRATIS! </i>
+            <i class="fas fa-headset"> Atencion personalizada </i>
+             </div>
+    </div>
+<!----------- CARACTERISTICAS --------------->
+<div class="bg-gray-50 py-24 sm:py-32">
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    <h2 class="text-center text-base/7 font-semibold text-indigo-600">Máxima adaptación a tus necesidades</h2>
+    <p class="mx-auto mt-2 max-w-lg text-pretty text-center text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl">Ponle la suela que desees a tus zapatillas Hat Trick</p>
+    <div class="mt-10 grid gap-4 sm:mt-16 grid-cols-2 lg:grid-cols-2">
+      <!-- Tarjeta 1 -->
+      <div class="relative">
+        <div class="absolute inset-px rounded-lg bg-white"></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-lg">
+          <div class="px-8 pt-8">
+            <p class="text-lg font-medium text-gray-950 text-center">De Goma</p>
+            <p class="mt-2 text-sm text-gray-600 text-center">Ideal para superficies lisas como baldosas, ofreciendo tracción superior. Su diseño flexible brinda estabilidad en terrenos resbaladizos.</p>
+          </div>
+          <div class="flex flex-1 items-center justify-center px-8 py-10">
+            <img class="cursor-pointer" src="/Imgs/Goma.png" alt="Suela Goma" onclick="openModal('/Imgs/Goma.png')">
+          </div>
+        </div>
+      </div>
+      <!-- Tarjeta 2 -->
+      <div class="relative">
+        <div class="absolute inset-px rounded-lg bg-white"></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-lg">
+          <div class="px-8 pt-8">
+            <p class="text-lg font-medium text-gray-950 text-center">De Colores</p>
+            <p class="mt-2 text-sm text-gray-600 text-center">Pensada para superficies duras como cemento o asfalto, esta suela resistente proporciona durabilidad y gran agarre en cada paso.</p>
+          </div>
+          <div class="flex flex-1 items-center justify-center px-8 py-10">
+            <img class="cursor-pointer" src="/Imgs/Colores.png" alt="Suela de Colores" onclick="openModal('/Imgs/Colores.png')">
+          </div>
+        </div>
+      </div>
+      <!-- Tarjeta 3 -->
+      <div class="relative">
+        <div class="absolute inset-px rounded-lg bg-white"></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-lg">
+          <div class="px-8 pt-8">
+            <p class="text-lg font-medium text-gray-950 text-center">Negra</p>
+            <p class="mt-2 text-sm text-gray-600 text-center">Perfecta para largas jornadas sobre asfalto, su composición duradera asegura resistencia y confort. Ideal para jugadores que buscan estabilidad en superficies urbanas.</p>
+          </div>
+          <div class="flex flex-1 items-center justify-center px-8 py-10">
+            <img class="cursor-pointer" src="/Imgs/Negra.png" alt="Suela Negra" onclick="openModal('/Imgs/Negra.png')">
+          </div>
+        </div>
+      </div>
+      <!-- Tarjeta 4 -->
+      <div class="relative">
+        <div class="absolute inset-px rounded-lg bg-white"></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-lg">
+          <div class="px-8 pt-8">
+            <p class="text-lg font-medium text-gray-950 text-center">Torretin</p>
+            <p class="mt-2 text-sm text-gray-600 text-center">Perfecta para césped sintético, esta suela especializada asegura una tracción óptima y estabilidad, diseñada para movimientos rápidos.</p>
+          </div>
+          <div class="flex flex-1 items-center justify-center px-8 py-10">
+            <img class="cursor-pointer" src="/Imgs/Torretin.png" alt="Suela Torretin" onclick="openModal('/Imgs/Torretin.png')">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div id="suelaModal" class="hidden fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white rounded-lg p-4 max-w-lg w-full">
+    <button id="closeModal" class="bg-black text-white py-2 px-4 rounded">Cerrar</button>
+    <img id="modalImage" class="w-full h-auto mt-4" src="" alt="Suela en detalle">
+  </div>
+</div>
+<!----------- TITULO CATALOGO --------------->
+<div class="header bg-black py-6 text-center" id="Catalogo">
+  <h2 class="text-white text-3xl font-bold tracking-wide shadow-lg">Conoce nuestros modelos</h2>
+</div>
+<!----------- CATALOGO ---------------> 
+<div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <h2 class="sr-only">Productos</h2>
+<!----------- ZAMBA --------------->
+    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="/Imgs/Zamba1.png" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Zamba (Cuero)</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$96.900</p>
+        <div class="flex mt-2 space-x-2">
+          <a href="URL_DEL_VIDEO" class="inline-block px-4 py-2 text-sm font-medium text-white bg-black rounded hover:bg-gray-800">Ver Video</a>
+          <a href="URL_DE_COLORES" class="inline-block px-4 py-2 text-sm font-medium text-white bg-green-600 rounded hover:bg-green-700">Ver Más Colores</a>
+        </div>
+      </a>
+<!----------- DYNAMIC--------------->
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="/Imgs/Dynamic1.png" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Dynamic (Sintético Alta Calidad)</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$86.900</p>
+        <div class="flex mt-2 space-x-2">
+          <a href="URL_DEL_VIDEO" class="inline-block px-4 py-2 text-sm font-medium text-white bg-black rounded hover:bg-gray-800">Ver Video</a>
+          <a href="URL_DE_COLORES" class="inline-block px-4 py-2 text-sm font-medium text-white bg-green-600 rounded hover:bg-green-700">Ver Más Colores</a>
+        </div>
+      </a>
+<!----------- MASTER--------------->
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="/Imgs/Master2.png" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Master (Cuero)</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$96.900</p>
+        <div class="flex mt-2 space-x-2">
+          <a href="URL_DEL_VIDEO" class="inline-block px-4 py-2 text-sm font-medium text-white bg-black rounded hover:bg-gray-800">Ver Video</a>
+          <a href="URL_DE_COLORES" class="inline-block px-4 py-2 text-sm font-medium text-white bg-green-600 rounded hover:bg-green-700">Ver Más Colores</a>
+        </div>
+      </a>
+<!-----------SALA--------------->
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="/Imgs/Sala1.png" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Sala</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$86.900</p>
+        <div class="flex mt-2 space-x-2">
+          <a href="URL_DEL_VIDEO" class="inline-block px-4 py-2 text-sm font-medium text-white bg-black rounded hover:bg-gray-800">Ver Video</a>
+          <a href="URL_DE_COLORES" class="inline-block px-4 py-2 text-sm font-medium text-white bg-green-600 rounded hover:bg-green-700">Ver Más Colores</a>
+        </div>
+      </a>
+<!-----------ULTRA--------------->
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="/Imgs/Ultra1.png" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Ultra (Cuero)</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$96.900</p>
+        <div class="flex mt-2 space-x-2">
+          <a href="URL_DEL_VIDEO" class="inline-block px-4 py-2 text-sm font-medium text-white bg-black rounded hover:bg-gray-800">Ver Video</a>
+          <a href="URL_DE_COLORES" class="inline-block px-4 py-2 text-sm font-medium text-white bg-green-600 rounded hover:bg-green-700">Ver Más Colores</a>
+        </div>
+      </a>
+<!-----------SINTETIK--------------->
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="/Imgs/Sintetik1.png" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Sintetik (Sintético Alta Calidad)</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$86.900</p>
+        <div class="flex mt-2 space-x-2">
+          <a href="URL_DEL_VIDEO" class="inline-block px-4 py-2 text-sm font-medium text-white bg-black rounded hover:bg-gray-800">Ver Video</a>
+          <a href="URL_DE_COLORES" class="inline-block px-4 py-2 text-sm font-medium text-white bg-green-600 rounded hover:bg-green-700">Ver Más Colores</a>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<!-----------BOTON WHATSAPP --------------->
+    <a href="https://wa.me/+573125141329?text=Estoy%20interesad@%20en%20las%20zapatillas" target="_blank" class="whatsapp-button">
+        <img src="Imgs/whatsapp.png" alt="WhatsApp">
+    </a>
+<!----------FOOTER --------------->
+<footer class="bg-gray-800 text-white py-6">
+  <div class="container mx-auto flex justify-between items-center">
+<!-- Información -->
+    <div>
+      <a href="#inicio" class="text-lg font-semibold text-white hover:text-blue-500">Zapatillas Hat Trick</a>
+    </div>    
+<!-- Redes Sociales y Dirección -->
+    <div class="flex space-x-4 mr-10">
+      <!-- Enlace a Facebook -->
+      <a href="https://www.facebook.com/p/Zapatillas-Hat-Trick-100064189026215/" target="_blank" class="text-white hover:text-blue-500">
+        <i class="fab fa-facebook-f fa-lg"></i>
+      </a>
+<!-- Enlace a Instagram -->
+      <a href="https://www.instagram.com/zapatillashattrick?igsh=YzljYTk1ODg3Zg==" target="_blank" class="text-white hover:text-pink-500">
+        <i class="fab fa-instagram fa-lg"></i>
+      </a>
+<!-- Enlace a Google Maps -->
+      <a href="https://www.google.com/maps/place/Diag.+31+a+%2324-02,+Bogotá" target="_blank" class="text-white hover:text-red-500">
+        <i class="fas fa-map-marker-alt fa-lg"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
