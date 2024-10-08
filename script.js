@@ -1,7 +1,6 @@
-// Seleccionar los elementos
+// Menu Hamburguesa
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const mobileMenu = document.getElementById('mobileMenu');
-
 // Función para alternar el menú
 hamburgerBtn.addEventListener('click', function() {
   mobileMenu.classList.toggle('hidden');
@@ -15,6 +14,7 @@ function openModal(imageSrc) {
   document.getElementById("closeModalSuelas").addEventListener("click", function() {
     document.getElementById("suelaModal").classList.add("hidden");
   });
+
 // Modal Mayoristas
 const modal = document.getElementById('modal');
 const mayoristasBtn = document.getElementById('mayoristasBtn');
@@ -64,7 +64,7 @@ Producto.prototype.render = function() {
     new Producto("Sala", "./Imgs/Sala1.png", 86900, "Sintético Alta Calidad", "./Imgs/SalaVideo.mp4", "URL_DE_COLORES"),
     new Producto("Ultra", "./Imgs/Ultra1.png", 96900, "Cuero", "./Imgs/UltraVideo.mp4", "URL_DE_COLORES"),
     new Producto("Sintetik", "./Imgs/Sintetik1.png", 86900, "Sintético Alta Calidad", "./Imgs/SintetikVideo.mp4", "URL_DE_COLORES"),
-    new Producto("Copa", "./Imgs/Sintetik1.png", 86900, "Sintético Alta Calidad", "./Imgs/CopaVideo.mp4", "URL_DE_COLORES"),
+    new Producto("Copa", "./Imgs/Copa1.png", 86900, "Sintético Alta Calidad", "./Imgs/CopaVideo.mp4", "URL_DE_COLORES"),
   ];
 // Insersion
   const productosHTML = productos.map((producto) => producto.render()).join("");
@@ -88,8 +88,6 @@ function cerrarModalVideoCatalogo() {
     const modalVideoCatalogo = document.getElementById('modalVideoCatalogo');
     modalVideoCatalogo.classList.add('hidden');  // Ocultar el modal
 }
-
-
 
 // Enviar el formulario a WhatsApp
 document.getElementById('mayoristasForm').addEventListener('submit', function(e) {
