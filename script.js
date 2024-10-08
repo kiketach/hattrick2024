@@ -3,14 +3,14 @@ function openModal(imageSrc) {
     document.getElementById("modalImage").src = imageSrc;
     document.getElementById("suelaModal").classList.remove("hidden");
   }
-  document.getElementById("closeModal").addEventListener("click", function() {
+  document.getElementById("closeModalSuelas").addEventListener("click", function() {
     document.getElementById("suelaModal").classList.add("hidden");
   });
 
-// Modal abrir/cerrar
+// Modal Mayoristas
 const modal = document.getElementById('modal');
 const mayoristasBtn = document.getElementById('mayoristasBtn');
-const closeModal = document.getElementById('closeModal');
+const closeModal = document.getElementById('closeModalMayoristas');
 
 mayoristasBtn.addEventListener('click', () => {
   modal.classList.remove('hidden');

@@ -45,7 +45,7 @@
       </div>
       <button type="submit" class="w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-700">Enviar</button>
     </form>
-    <button id="closeModal" class="mt-4 text-gray-500 hover:text-gray-900">Cerrar</button>
+    <button id="closeModalMayoristas" class="mt-4 text-black hover:text-gray-900">Cerrar</button>
   </div>
 </div>
 <!-----------BANNER--------------->
@@ -79,7 +79,7 @@
             <p class="mt-2 text-sm text-gray-600 text-center">Ideal para superficies lisas como baldosas, ofreciendo tracción superior. Su diseño flexible brinda estabilidad en terrenos resbaladizos.</p>
           </div>
           <div class="flex flex-1 items-center justify-center px-8 py-10">
-            <img class="cursor-pointer" src="./Imgs/Goma.png" alt="Suela Goma" onclick="openModal('/Imgs/Goma.png')">
+            <img class="cursor-pointer" src="./Imgs/Goma.png" alt="Suela Goma" onclick="openModal('./Imgs/Goma.png')">
           </div>
         </div>
       </div>
@@ -92,7 +92,7 @@
             <p class="mt-2 text-sm text-gray-600 text-center">Pensada para superficies duras como cemento o asfalto, esta suela resistente proporciona durabilidad y gran agarre en cada paso.</p>
           </div>
           <div class="flex flex-1 items-center justify-center px-8 py-10">
-            <img class="cursor-pointer" src="./Imgs/Colores.png" alt="Suela de Colores" onclick="openModal('/Imgs/Colores.png')">
+            <img class="cursor-pointer" src="./Imgs/Colores.png" alt="Suela de Colores" onclick="openModal('./Imgs/Colores.png')">
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@
             <p class="mt-2 text-sm text-gray-600 text-center">Perfecta para largas jornadas sobre asfalto, su composición duradera asegura resistencia y confort. Ideal para jugadores que buscan estabilidad en superficies urbanas.</p>
           </div>
           <div class="flex flex-1 items-center justify-center px-8 py-10">
-            <img class="cursor-pointer" src="./Imgs/Negra.png" alt="Suela Negra" onclick="openModal('/Imgs/Negra.png')">
+            <img class="cursor-pointer" src="./Imgs/Negra.png" alt="Suela Negra" onclick="openModal('./Imgs/Negra.png')">
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@
             <p class="mt-2 text-sm text-gray-600 text-center">Perfecta para césped sintético, esta suela especializada asegura una tracción óptima y estabilidad, diseñada para movimientos rápidos.</p>
           </div>
           <div class="flex flex-1 items-center justify-center px-8 py-10">
-            <img class="cursor-pointer" src="./Imgs/Torretin.png" alt="Suela Torretin" onclick="openModal('/Imgs/Torretin.png')">
+            <img class="cursor-pointer" src="./Imgs/Torretin.png" alt="Suela Torretin" onclick="openModal('./Imgs/Torretin.png')">
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@
 <!-- Modal -->
 <div id="suelaModal" class="hidden fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex items-center justify-center">
   <div class="bg-white rounded-lg p-4 max-w-lg w-full">
-    <button id="closeModal" class="bg-black text-white py-2 px-4 rounded">Cerrar</button>
+    <button id="closeModalSuelas" class="bg-black text-white py-2 px-4 rounded">Cerrar</button>
     <img id="modalImage" class="w-full h-auto mt-4" src="" alt="Suela en detalle">
   </div>
 </div>
