@@ -104,10 +104,16 @@ h1 {
     max-height: 80vh;
 }
 
+#closeVideoModal {
+    position: absolute; /* Para mantenerlo en la esquina */
+    top: 10px; /* Ajusta la posición desde la parte superior */
+    right: 10px; /* Ajusta la posición desde la derecha */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  }
+
 button {
     cursor: pointer; 
 }
-
 /* =============BOTON DE WHATSAPP===================== */
 .whatsapp-button {
     position: fixed;
