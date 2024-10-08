@@ -20,6 +20,26 @@ closeModal.addEventListener('click', () => {
   modal.classList.add('hidden');
 });
 
+// Modal Video
+function openModal(videoSrc) {
+    document.getElementById("videoPlayer").src = videoSrc; // Establece la fuente del video
+    document.getElementById("videoModal").classList.add("show");
+  }
+
+  document.getElementById("closeVideoModal").addEventListener("click", function() {
+    document.getElementById("videoModal").classList.remove("show");
+    document.getElementById("videoPlayer").pause(); // Pausar el video al cerrar
+  });
+  
+  // Opción para cerrar el modal al hacer clic fuera del cuadro del modal
+  document.getElementById("videoModal").addEventListener("click", function(event) {
+    if (event.target === this) {
+      this.classList.remove("show");
+      document.getElementById("videoPlayer").pause();
+    }
+  });
+ 
+
 // Enviar el formulario a WhatsApp
 document.getElementById('mayoristasForm').addEventListener('submit', function(e) {
   e.preventDefault();
