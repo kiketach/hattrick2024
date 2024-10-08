@@ -16,10 +16,23 @@
 <nav class="bg-black text-white p-4 w-full shadow-md">
   <div class="container mx-auto flex justify-between items-center">
     <a href="#inicio" class="text-xl font-bold">Zapatillas Hat Trick</a>
-    <div class="space-x-8">
+    <div class="hidden space-x-8 md:flex">
       <a href="#Catalogo" class="hover:text-gray-400">Catálogo</a>
       <button id="mayoristasBtn" class="hover:text-gray-400">Mayoristas</button>
     </div>
+    <!-- Botón hamburguesa para móviles -->
+    <div class="md:hidden">
+      <button id="hamburgerBtn" class="focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <!-- Menú para móviles -->
+  <div id="mobileMenu" class="hidden md:hidden bg-black text-white space-y-4 p-4">
+    <a href="#Catalogo" class="block hover:text-gray-400">Catálogo</a>
+    <button id="mayoristasMobileBtn" class="block hover:text-gray-400">Mayoristas</button>
   </div>
 </nav>
 <!-- Modal Formulario Mayoristas -->

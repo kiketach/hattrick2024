@@ -1,3 +1,12 @@
+// Seleccionar los elementos
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Función para alternar el menú
+hamburgerBtn.addEventListener('click', function() {
+  mobileMenu.classList.toggle('hidden');
+});
+
 //Modal Suelas
 function openModal(imageSrc) {
     document.getElementById("modalImage").src = imageSrc;
@@ -9,11 +18,15 @@ function openModal(imageSrc) {
 // Modal Mayoristas
 const modal = document.getElementById('modal');
 const mayoristasBtn = document.getElementById('mayoristasBtn');
+const mayoristasMobileBtn = document.getElementById('mayoristasMobileBtn');
 const closeModal = document.getElementById('closeModalMayoristas');
 
 mayoristasBtn.addEventListener('click', () => {
   modal.classList.remove('hidden');
 });
+mayoristasMobileBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+  });
 closeModal.addEventListener('click', () => {
   modal.classList.add('hidden');
 });
